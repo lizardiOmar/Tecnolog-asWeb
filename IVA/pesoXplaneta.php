@@ -19,11 +19,12 @@
 			case 2://venus
 				return $masa*8.87;
 				break;
-			default:
-    			return $masa*9.81;//terra
-				break;
+			
 			case 4://Jupiter
 				return $masa*24.79;
+				break;
+			default://terra
+    				return $masa*9.81;
 				break;
 		}
 	}
