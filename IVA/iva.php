@@ -1,14 +1,14 @@
 <?php
 	require_once "lib/nusoap.php";
 	
-	function getIva ($costo){
-		return $costo*1.16;
+	function getMasa ($peso){//el peso será expresado en KG como un tipo float
+		return $peso/9.81;
 	}
 	//Declarar servidor de SOAP (Nu SOAP)
 	$server=new soap_server();
 	$server->configureWSDL("iva", "urn:iva");
 	$server->register(
-		"getIva",
+		"calcularPeso",
 		array("costo"=>"xsd:string"),
 		array("return"=>"xsd:string"),
 		"urn:iva",//ActionSOAP
