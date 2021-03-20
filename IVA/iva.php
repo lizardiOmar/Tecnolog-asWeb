@@ -4,6 +4,14 @@
 	function getMasa ($peso){//el peso será expresado en KG como un tipo float
 		return $peso/9.81;
 	}
+
+	function buscarPeso($planeta, $peso){
+		if ($planeta == "marte") {
+			return = peso * 3.711;
+		}else($planeta == "tierra") {
+			return = peso * 9.807;
+		}
+	}
 	//Declarar servidor de SOAP (Nu SOAP)
 	$server=new soap_server();
 	$server->configureWSDL("iva", "urn:iva");
