@@ -22,6 +22,9 @@
 			default:
     			return $masa*9.81;//terra
 				break;
+			case 4://Jupiter
+				return $masa*24.79;
+				break;
 		}
 	}
 	//Declarar servidor de SOAP (Nu SOAP)
