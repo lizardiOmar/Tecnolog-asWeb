@@ -5,7 +5,7 @@
 		return $peso/9.81;
 	}
 
-	function pesoXplaneta($peso, $planeta){//la variable planeta sera un int como el mtro. sugirió, simulando un indice.
+	function calcularPeso($peso, $planeta){//la variable planeta sera un int como el mtro. sugirió, simulando un indice.
 	
 		$masa=getMasa($peso);
 		
@@ -19,30 +19,23 @@
 			case 2://venus
 				return $masa*8.87;
 				break;
-			case 3://tierra
-    				return $masa*9.81;
+			default:
+    			return $masa*9.81;//terra
 				break;
 			case 4://Jupiter
 				return $masa*24.79;
 				break;
-			case 5://mercurio
-				return $masa * 3.70;
-				break;
-			case 6://neptuno
-				return $masa * 11;
-				break;
-				
 		}
 	}
 	//Declarar servidor de SOAP (Nu SOAP)
 	$server=new soap_server();
-	$server->configureWSDL("iva", "urn:iva");
+	$server->configureWSDL("pesoXplaneta", "urn:pesoXplaneta");
 	$server->register(
 		"calcularPeso",
-		array("costo"=>"xsd:string"),
-		array("return"=>"xsd:string"),
-		"urn:iva",//ActionSOAP
-		"urn:iva#getIva",//Nombre de dominios
+		array("peso"=>"xsd:float", "planeta"=>"xsd:int"),
+		array("return"=>"xsd:float"),
+		"urn:pesoXplaneta",//ActionSOAP
+		"urn:pesoXplaneta#getPeso",//Nombre de dominios
 		"rpc",//Estilo de codificación
 		"encoded",//
 		"5",//Documentación
