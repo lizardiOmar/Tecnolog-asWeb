@@ -20,11 +20,18 @@
 				return $masa*8.87;
 				break;
 			case 3://tierra
-    			return $masa*9.81;
+    				return $masa*9.81;
 				break;
 			case 4://Jupiter
 				return $masa*24.79;
 				break;
+			case 5://mercurio
+				return $masa * 3.70;
+				break;
+			case 6://neptuno
+				return $masa * 11;
+				break;
+				
 		}
 	}
 	//Declarar servidor de SOAP (Nu SOAP)
