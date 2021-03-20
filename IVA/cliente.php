@@ -1,6 +1,6 @@
 <?php
 	require_once "lib/nusoap.php"; 
-	$client=new nusoap_client("http://localhost/iva/iva.php");
+	$client=new nusoap_client("http://localhost/planetas/pesoXplaneta.php");
 	$error=$client->getError();
 	$result=$client->call("getIva", array("val_1"=>"100"));
 	if($client->fault){
