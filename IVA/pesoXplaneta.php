@@ -13,8 +13,14 @@
 			case 0://luna
 				return $masa*1.62;
 				break;
+			case 1://marte
+				return $masa*3.711;
+				break;
+			case 2://venus
+				return $masa*8.87;
+				break;
 			default:
-    			return $masa*9.81;
+    			return $masa*9.81;//terra
 				break;
 		}
 	}
