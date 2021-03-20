@@ -5,11 +5,17 @@
 		return $peso/9.81;
 	}
 
-	function buscarPeso($planeta, $peso){
-		if ($planeta == "marte") {
-			return = peso * 3.711;
-		}else($planeta == "tierra") {
-			return = peso * 9.807;
+	function pesoXplaneta($peso, $planeta){//la variable planeta sera un int como el mtro. sugirió, simulando un indice.
+	
+		$masa=getMasa($peso);
+		
+		switch ($planeta) {
+			case 0://luna
+				return $masa*1.62;
+				break;
+			default:
+    			return $masa*9.81;
+				break;
 		}
 	}
 	//Declarar servidor de SOAP (Nu SOAP)
