@@ -39,7 +39,15 @@
 		"rpc",//Estilo de codificación
 		"encoded",//
 		"5",//Documentación
-		"Calcula tu peso en distintos planetas. "//Estilo de codificación		
+		"Calcula tu peso en kg basado en la gravedad de distintos planetas ingresando dos valores: 
+		<br>Peso en kilogramos (FLOTANTE)
+		<br>Indice del planeta deseado (INTEGER)
+        <br>Los planetas disponibles para calcular son:
+			<br>0. Luna
+			<br>1. Marte
+			<br>2. Venus
+			<br>3. Jupiter 
+			<br> Default = Tierra"		
 	);
 	@$server->service(file_get_contents("php://input"));
 ?>

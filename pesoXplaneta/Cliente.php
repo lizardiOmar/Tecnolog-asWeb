@@ -17,7 +17,6 @@
 			switch ($planeta) {
 			case 0://luna
 				echo "<h2>Tu peso en la Luna es: $result<h2/>";
-				
 				break;
 			case 1://marte
 				echo "<h2>Tu peso en Marte es: $result<h2/>";
