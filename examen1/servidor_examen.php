@@ -1,4 +1,5 @@
 <?php
+
 	require_once "lib/nusoap.php";
 	date_default_timezone_set("America/Mexico_City");
 	
@@ -14,9 +15,6 @@
 	
 	$fecha_nacido=$dia_n."-".$mes_n."-".$año_n;
 	
-	
-	
-	
 	//Calcular proximo cumpleaños
 	function diferencia_entre_fechas($fecha_nac,$hoy)
 	{
@@ -28,6 +26,7 @@
 	function dias_cumple($d_n, $m_n, $a_n, $d_h, $m_h, $a_h){
 		if($m_n<$m_h){
 			$año=$a_h+1;
+			$cumple=$d_n."-".$m_n."-".$año;
 		}else{
 			if($d_n<$d_h){
 				$año=$a_h+1;
